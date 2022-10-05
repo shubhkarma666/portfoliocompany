@@ -1,0 +1,389 @@
+*{
+  font-family: Tahoma !important;
+}
+:root{
+  --primarycolor: #f44e37;
+}
+.mainContainer{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+nav, footer{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  background-color: #ddd;
+  box-sizing: border-box;
+  padding: 0 50px;
+}
+.logos, .links{
+  display: flex;
+  align-items: center;
+}
+.logos h1{
+  font-weight: bold;
+  font-size: 24px;
+}
+.logos h1::first-letter{
+  color: var(--primarycolor);
+}
+.logos button{
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: none;
+}
+.logos button img{
+  width: 100%;
+  display: block;
+}
+.links {
+  gap: 15px;
+}
+.links a{
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 12px;
+  color: black;
+}
+.links a:hover{
+  color: var(--primarycolor);
+}
+.slider{
+  width: 100%;
+  aspect-ratio: 2 / 1;
+  background-color: #bbb;
+  overflow: hidden;
+}
+.sliderInner{
+  width: 300%;
+  display: flex;
+  height: 100%;
+  position: relative;
+  left: 0;
+  animation: sliderAnimation 12s infinite;
+}
+.sliderInner img{
+  display: block;
+  width: calc(100% / 3);
+  height: 100%;
+}
+@keyframes sliderAnimation {
+  0% {
+    left: 0%;
+  }
+  25% {
+    left: 0%;
+  }
+  33.33% {
+    left: -100%;
+  }
+  58.33% {
+    left: -100%;
+  }
+  66.66% {
+    left: -200%;
+  }
+  91.67% {
+    left: -200%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+.sliderDots{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+.sliderDot{
+  width: 15px;
+  height: 15px;
+  background: gray;
+  border-radius: 50%;
+}
+.firstDot{
+  animation: firstDotAnimation 12s infinite;
+}
+@keyframes firstDotAnimation {
+  0% {
+    background: var(--primarycolor);
+  }
+  25% {
+    background: var(--primarycolor);
+  }
+  33.33% {
+    background: gray;
+  }
+  58.33% {
+    background: gray;
+  }
+  66.66% {
+    background: gray;
+  }
+  91.67% {
+    background: gray;
+  }
+  100% {
+    background: var(--primarycolor);
+  }
+}
+.secondDot{
+  animation: secondDotAnimation 12s infinite;
+}
+@keyframes secondDotAnimation {
+  0% {
+    background: gray;
+  }
+  25% {
+    background: gray;
+  }
+  33.33% {
+    background: var(--primarycolor);
+  }
+  58.33% {
+    background: var(--primarycolor);
+  }
+  66.66% {
+    background: gray;
+  }
+  91.67% {
+    background: gray;
+  }
+  100% {
+    background: gray;
+  }
+}
+.thirdDot{
+  animation: thirdDotAnimation 12s infinite;
+}
+@keyframes thirdDotAnimation {
+  0% {
+    background: gray;
+  }
+  25% {
+    background: gray;
+  }
+  33.33% {
+    background: gray;
+  }
+  58.33% {
+    background: gray;
+  }
+  66.66% {
+    background: var(--primarycolor);
+  }
+  91.67% {
+    background: var(--primarycolor);
+  }
+  100% {
+    background: gray;
+  }
+}
+section{
+  width: 100%;
+}
+.textBox{
+  text-align: center;
+  margin-top: 50px;
+}
+.textBox h2{
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+.textBox h1, .supports h1{
+  font-size: 24px;
+}
+.textBox p, .supports p{
+  max-width: 800px;
+  box-sizing: border-box;
+  padding: 0 25px;
+  margin: 20px auto 0 auto;
+}
+.solutions{
+  width: 100%;
+  display: flex;
+  margin-top: 50px;
+}
+.solution{
+  width: 25%;
+  height: 200px;
+  text-align: center;
+}
+.solutionImg, .featureImg{
+  width: 100px;
+  height: 100px;
+  background: var(--primarycolor);
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 50%;
+  box-sizing: border-box;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+.solutionImg img, .featureImg img{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.banner{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+}
+.banner img{
+  width: 50%;
+  display: block;
+  height: auto;
+}
+.features{
+  width: 100%;
+  display: flex;
+  margin-top: 50px;
+}
+.feature{
+  width: 33.33%;
+  box-sizing: border-box;
+  padding: 10px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.feature .featureImg{
+  width: 75px;
+  height: 75px;
+  margin: 0;
+  text-align: left;
+}
+.featureDetail{
+  width: calc(100% - 85px);
+}
+.featureDetail h1{
+  font-size: 22px;
+}
+.featureDetail p{
+  margin-top: 10px;
+}
+.supports{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 50px;
+  background: var(--primarycolor);
+  text-align: center;
+  margin-top: 50px;
+}
+.supportsButton{
+  margin-top: 25px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.supportsButton button{
+  display: block;
+  padding: 10px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.peoples{
+  width: 100%;
+  display: flex;
+}
+.people{
+  width: 25%;
+  box-sizing: border-box;
+  padding: 10px;
+  margin-top: 50px;
+}
+.peopleImg{
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.peopleImg img{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.people .textBox{
+  margin-top: 35px;
+}
+.infos{
+  background: #686868;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  margin-top: 50px;
+}
+.info{
+  width: 33.33%;
+  box-sizing: border-box;
+  padding: 20px;
+}
+.info .textBox{
+  margin-top: 0;
+  text-align: left;
+}
+.info .textBox p{
+  padding: 0;
+}
+footer{
+  background: black;
+  color: white;
+}
+footer .links a{
+  color: white;
+
+}
+
+@media screen and (max-width: 420px) {
+  nav{
+    display: block;
+    padding: 0 15px;
+    height: auto;
+  }
+  .logos{
+    width: 100%;
+    justify-content: space-between;
+  }
+  .logos button{
+    display: block;
+  }
+  .links, .links a{
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    padding-bottom: 10px;
+  }
+  .links{
+    display: none;
+  }
+  .solutions, .banner, .features, .peoples, .infos{
+    flex-wrap: wrap;
+  }
+  .solution, .banner img, .feature, .people, .info{
+    width: 100%;
+  }
+  footer{
+    display: block;
+    height: auto;
+    padding: 15px;
+    text-align: center;
+  }
+  footer .links{
+    margin-top: 30px;
+  }
+  footer .links a{
+    text-align: center;
+    margin-top: 10px;
+  }
+}
